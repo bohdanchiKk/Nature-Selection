@@ -1,6 +1,6 @@
 package org.example.staticElements;
 
-import org.example.abstraction.Entity;
+import org.example.objects.Entity;
 import org.example.view.Emoji;
 
 import java.util.Random;

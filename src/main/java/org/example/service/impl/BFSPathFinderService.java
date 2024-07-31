@@ -1,7 +1,7 @@
 package org.example.service.impl;
 
-import org.example.Cell;
-import org.example.animals.Herbivore;
+import org.example.map.Cell;
+import org.example.objects.Hervibore;
 import org.example.map.Map;
 import org.example.service.PathFinderService;
 import org.example.staticElements.Grass;
@@ -27,7 +27,7 @@ public class BFSPathFinderService implements PathFinderService {
     @Override
     public Cell isPreyNear(Cell cell) {
         return cellsToCheck(cell).stream()
-                .filter(el -> map.entities.get(el) != null && map.entities.get(el).getClass() == Herbivore.class)
+                .filter(el -> map.entities.get(el) != null && map.entities.get(el).getClass() == Hervibore.class)
                 .findFirst().orElse(null);
     }
 
@@ -64,7 +64,7 @@ public class BFSPathFinderService implements PathFinderService {
         while (!toVisit.isEmpty()){
             Cell visiting = toVisit.pollFirst();
             path.add(visiting);
-            if (isGrassNear(visiting) != null) break;
+            if (isPreyNear(visiting) != null) break;
             toVisit.addAll(emptyCellsNear(visiting).stream().filter(c -> !path.contains(c)).collect(Collectors.toList()));
         }
         return path;

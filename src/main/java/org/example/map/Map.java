@@ -1,7 +1,6 @@
 package org.example.map;
 
-import org.example.Cell;
-import org.example.abstraction.Entity;
+import org.example.objects.Entity;
 import org.example.service.RenderService;
 import org.example.service.Renderable;
 import org.example.utils.EntityFactory;

@@ -1,6 +1,6 @@
 package org.example.service;
 
-import org.example.Cell;
+import org.example.map.Cell;
 
 import java.util.Deque;
 import java.util.List;

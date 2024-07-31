@@ -1,8 +1,8 @@
 package org.example.utils;
 
-import org.example.abstraction.Entity;
-import org.example.animals.Herbivore;
-import org.example.animals.Predator;
+import org.example.objects.Entity;
+import org.example.objects.Hervibore;
+import org.example.objects.Predator;
 import org.example.map.Map;
 import org.example.staticElements.Grass;
 import org.example.staticElements.Rock;
@@ -30,12 +30,10 @@ public class EntityFactory {
                 return new Tree();
             }
             case 3 -> {
-                return new Herbivore();
-//                return new Herbivore(new Random().nextInt(5), new Random().nextInt(5),map);
+                return new Hervibore(new Random().nextInt(5), new Random().nextInt(5), map);
             }
             case 4 -> {
-                return new Predator();
-//                return new Predator(new Random().nextInt(5), new Random().nextInt(5),map);
+                return new Predator(new Random().nextInt(5), new Random().nextInt(5), new Random().nextInt(5), map);
             }
             default -> {
                 return null;

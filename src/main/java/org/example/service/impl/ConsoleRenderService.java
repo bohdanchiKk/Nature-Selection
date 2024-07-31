@@ -1,6 +1,6 @@
 package org.example.service.impl;
 
-import org.example.Cell;
+import org.example.map.Cell;
 import org.example.map.Map;
 import org.example.service.RenderService;
 
